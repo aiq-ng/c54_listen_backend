@@ -6,7 +6,7 @@ cloudinary==1.43.0
 fastapi==0.115.11
 h11==0.14.0
 idna==3.10
-psycopg2==2.9.10
+psycopg2-binary
 pydantic==2.10.6
 pydantic_core==2.27.2
 python-dotenv==1.0.1

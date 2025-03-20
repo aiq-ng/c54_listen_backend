@@ -106,10 +106,11 @@ class Manage_streams():
                 conn.close()
         
     def get_stream(self):
-        conn = db_connection.get_db_connection()
+        try:
+            conn = db_connection.get_db_connection()
 
-        if not conn:
-            return {"error": "Database connection failed"}
+        except Exception as e:
+            return {"error": f"Database connection failed {str(e)}"}
 
         try:
             cursor = conn.cursor()
