@@ -75,3 +75,78 @@ INSERT INTO listen_audio_streams (stream_id, audio_url, title, duration) VALUES
     (10, 'https://example.com/series/scifi4.mp3', 'Episode 4: Alien Worlds', 1600),
     (10, 'https://example.com/series/scifi5.mp3', 'Episode 5: Rebellion', 1900),
     (10, 'https://example.com/series/scifi6.mp3', 'Episode 6: Finale', 2000);
+
+
+
+
+
+
+    INSERT INTO video_stream_categories (name, description, is_active) VALUES
+    ('Breaking News', 'Live coverage of urgent news events', TRUE),
+    ('Network TV Channel', 'C54’s flagship live channel programming', TRUE),
+    ('Politics', 'Political news and analysis', TRUE),
+    ('World Events', 'Global news and international stories', TRUE),
+    ('Business', 'Financial markets and economic updates', TRUE);
+
+
+
+    INSERT INTO video_streams (category_id, title, description, thumbnail_url, stream_url, start_time, is_live) VALUES
+    -- Breaking News (category_id: 1)
+    (1, 'C54 Breaking News: Storm Coverage', 'Live updates on a major storm', 'https://example.com/storm_thumb.jpg', 'https://example.com/storm/stream', '2025-03-20 08:00:00+00', TRUE),
+    (1, 'C54 Breaking News: Election Results', 'Real-time election updates', 'https://example.com/election_thumb.jpg', 'https://example.com/election/stream', '2025-03-20 20:00:00+00', FALSE),
+    -- Network TV Channel (category_id: 2)
+    (2, 'C54 Network Live', 'C54’s main live news feed', 'https://example.com/c54live_thumb.jpg', 'https://example.com/c54live/stream', '2025-03-20 00:00:00+00', TRUE),
+    (2, 'C54 Evening News', 'Daily evening news roundup', 'https://example.com/evening_thumb.jpg', 'https://example.com/evening/stream', '2025-03-20 18:00:00+00', FALSE),
+    -- Politics (category_id: 3)
+    (3, 'C54 Politics Live: Debate Night', 'Live political debate coverage', 'https://example.com/debate_thumb.jpg', 'https://example.com/debate/stream', '2025-03-21 19:00:00+00', FALSE),
+    -- World Events (category_id: 4)
+    (4, 'C54 World: Ukraine Update', 'Live reports from Ukraine', 'https://example.com/ukraine_thumb.jpg', 'https://example.com/ukraine/stream', '2025-03-22 12:00:00+00', TRUE),
+    (4, 'C54 World: Climate Summit', 'Live from the global summit', 'https://example.com/climate_thumb.jpg', 'https://example.com/climate/stream', '2025-03-23 14:00:00+00', FALSE),
+    -- Business (category_id: 5)
+    (5, 'C54 Business: Market Open', 'Live stock market opening', 'https://example.com/market_thumb.jpg', 'https://example.com/market/stream', '2025-03-24 13:30:00+00', TRUE);
+
+
+
+    INSERT INTO tv_shows (title, description, thumbnail_url, release_date, season_count, is_active) VALUES
+    ('C54 Tonight with Jane Doe', 'Nightly news and interviews', 'https://example.com/c54tonight_thumb.jpg', '2023-01-10', 3, TRUE),
+    ('C54 Global Brief', 'In-depth global news analysis', 'https://example.com/globalbrief_thumb.jpg', '2022-06-15', 2, TRUE),
+    ('C54 Money Matters', 'Business and finance insights', 'https://example.com/money_thumb.jpg', '2021-09-01', 4, TRUE),
+    ('C54 Inside Politics', 'Political news and commentary', 'https://example.com/politics_thumb.jpg', '2020-03-05', 5, TRUE),
+    ('C54 Spotlight', 'Investigative journalism specials', 'https://example.com/spotlight_thumb.jpg', '2019-11-20', 6, TRUE);
+
+
+    INSERT INTO tv_show_videos (show_id, title, description, video_url, duration, release_date, is_published) VALUES
+    -- C54 Tonight with Jane Doe (show_id: 1)
+    (1, 'March 20 Recap', 'Top stories of the day', 'https://example.com/c54tonight_mar20.mp4', 3600, '2025-03-20 22:00:00+00', TRUE),
+    (1, 'Interview: Senator Smith', 'Exclusive political interview', 'https://example.com/c54tonight_smith.mp4', 3000, '2025-03-19 22:00:00+00', TRUE),
+    (1, 'Storm Aftermath', 'Reporting on storm recovery', 'https://example.com/c54tonight_storm.mp4', 3300, '2025-03-18 22:00:00+00', TRUE),
+    -- C54 Global Brief (show_id: 2)
+    (2, 'Ukraine Crisis Update', 'Latest from the frontlines', 'https://example.com/global_ukraine.mp4', 2700, '2025-03-20 15:00:00+00', TRUE),
+    (2, 'Climate Change Special', 'Impact of global warming', 'https://example.com/global_climate.mp4', 3000, '2025-03-13 15:00:00+00', TRUE),
+    -- C54 Money Matters (show_id: 3)
+    (3, 'Stock Market Crash?', 'Analyzing market trends', 'https://example.com/money_crash.mp4', 2400, '2025-03-20 17:00:00+00', TRUE),
+    (3, 'Crypto Boom', 'Cryptocurrency surge explained', 'https://example.com/money_crypto.mp4', 2600, '2025-03-19 17:00:00+00', TRUE),
+    (3, 'Interest Rates Rise', 'Federal Reserve update', 'https://example.com/money_rates.mp4', 2500, '2025-03-18 17:00:00+00', TRUE),
+    -- C54 Inside Politics (show_id: 4)
+    (4, 'Election Preview', 'Breaking down the candidates', 'https://example.com/politics_election.mp4', 3600, '2025-03-20 20:00:00+00', TRUE),
+    (4, 'Congress Standoff', 'Budget debate analysis', 'https://example.com/politics_congress.mp4', 3400, '2025-03-19 20:00:00+00', TRUE),
+    (4, 'Policy Impact', 'New law effects', 'https://example.com/politics_policy.mp4', 3200, '2025-03-18 20:00:00+00', TRUE),
+    -- C54 Spotlight (show_id: 5)
+    (5, 'Corruption Exposed', 'Investigating government fraud', 'https://example.com/spotlight_corruption.mp4', 4200, '2025-03-20 21:00:00+00', TRUE),
+    (5, 'Health Crisis', 'Hospital system failures', 'https://example.com/spotlight_health.mp4', 4000, '2025-03-13 21:00:00+00', TRUE),
+    (5, 'Cybersecurity Breaches', 'Major data leaks', 'https://example.com/spotlight_cyber.mp4', 3800, '2025-03-06 21:00:00+00', TRUE),
+    (5, 'Climate Refugees', 'Migration due to floods', 'https://example.com/spotlight_refugees.mp4', 3900, '2025-02-27 21:00:00+00', TRUE);
+
+
+    INSERT INTO c54_shorts (title, description, video_url, duration, publish_date, view_count) VALUES
+    ('C54 Short: Storm Hits Coast', 'Hurricane makes landfall', 'https://example.com/short_storm.mp4', 60, '2025-03-20 08:30:00+00', 2500),
+    ('C54 Short: Election Poll', 'Latest voter trends', 'https://example.com/short_poll.mp4', 45, '2025-03-20 09:00:00+00', 1800),
+    ('C54 Short: Market Drop', 'Stocks plunge 500 points', 'https://example.com/short_market.mp4', 30, '2025-03-20 10:15:00+00', 3000),
+    ('C54 Short: Ukraine Strike', 'Missile attack reported', 'https://example.com/short_ukraine.mp4', 75, '2025-03-20 11:30:00+00', 2200),
+    ('C54 Short: Fed Rate Hike', 'Interest rates up 0.5%', 'https://example.com/short_fed.mp4', 50, '2025-03-20 13:00:00+00', 1500),
+    ('C54 Short: Climate Protest', 'Activists block roads', 'https://example.com/short_protest.mp4', 60, '2025-03-20 14:45:00+00', 900),
+    ('C54 Short: Tech Outage', 'Major app crashes', 'https://example.com/short_outage.mp4', 40, '2025-03-20 16:00:00+00', 1200),
+    ('C54 Short: Health Alert', 'New virus strain detected', 'https://example.com/short_health.mp4', 90, '2025-03-20 17:15:00+00', 600),
+    ('C54 Short: Space Launch', 'Rocket lifts off', 'https://example.com/short_space.mp4', 55, '2025-03-20 18:30:00+00', 2000),
+    ('C54 Short: Court Ruling', 'Landmark decision made', 'https://example.com/short_court.mp4', 70, '2025-03-20 19:45:00+00', 1100);
+
