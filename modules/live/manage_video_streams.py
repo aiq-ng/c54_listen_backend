@@ -279,9 +279,7 @@ class Manage_streams():
                 conn.close()
     
 
-
-
-    def upload_audio(self, stream_id, title, duration, audio):
+    def upload_video(self, stream_id, title, duration, audio):
         conn = db_connection.get_db_connection()
 
         if not conn:
@@ -301,7 +299,7 @@ class Manage_streams():
             title = title
             duration = duration
 
-            query = "INSERT INTO listen_audio_streams (stream_id, audio_url, title, duration) VALUES (%s, %s, %s, %s)"
+            query = "INSERT INTO tv_show_videos (show_id, title, description, video_url,) VALUES (%s, %s, %s, %s)"
 
             cursor.execute(query, (stream_id, audio_url, title, duration))
 

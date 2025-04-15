@@ -8,18 +8,18 @@ INSERT INTO listen_streams_category (name, description) VALUES
 INSERT INTO listen_streams (category_id, name, description, thumbnail, stream_url) VALUES
     -- Live (category_id: 1)
     (1, 'Live News Update', 'Daily live updates on global news', 'https://img.freepik.com/free-vector/detailed-podcast-logo-template_23-2148786067.jpg', 'http://live.example.com/news'), -- Image1
-    (1, 'Concert Stream', 'Live music performances from artists worldwide', '[Base64 JPEG 3]', 'http://live.example.com/concert'), -- Image4
-    (1, 'Sports Commentary', 'Real-time commentary on major sports events', '[Base64 JPEG 1]', 'http://live.example.com/sports'), -- Image2
+    (1, 'Concert Stream', 'Live music performances from artists worldwide', 'https://img.freepik.com/free-vector/detailed-podcast-logo-template_23-2148786067.jpg', 'http://live.example.com/concert'), -- Image4
+    (1, 'Sports Commentary', 'Real-time commentary on major sports events', 'https://img.freepik.com/free-vector/detailed-podcast-logo-template_23-2148786067.jpg', 'http://live.example.com/sports'), -- Image2
     -- Podcast (category_id: 2)
-    (2, 'Tech Talk', 'Weekly discussions on technology trends', '[Base64 JPEG 4]', NULL), -- Image5
-    (2, 'True Crime Files', 'Deep dives into unsolved mysteries', '[Base64 JPEG 2]', NULL), -- Image3
-    (2, 'Health Matters', 'Expert advice on wellness and fitness', '[Base64 JPEG 1]', NULL), -- Image2
+    (2, 'Tech Talk', 'Weekly discussions on technology trends', 'https://img.freepik.com/free-vector/detailed-podcast-logo-template_23-2148786067.jpg', 'http://live.example.com/sports'), -- Image5
+    (2, 'True Crime Files', 'Deep dives into unsolved mysteries', 'https://img.freepik.com/free-vector/detailed-podcast-logo-template_23-2148786067.jpg', 'http://live.example.com/sports'), -- Image3
+    (2, 'Health Matters', 'Expert advice on wellness and fitness', 'https://img.freepik.com/free-vector/detailed-podcast-logo-template_23-2148786067.jpg', 'http://live.example.com/sports'), -- Image2
     -- Showcast (category_id: 3)
-    (3, 'Morning Mix', 'A blend of live chats and pre-recorded segments', 'https://img.freepik.com/free-vector/detailed-podcast-logo-template_23-2148786067.jpg', NULL), -- Image1
-    (3, 'Comedy Hour', 'Stand-up specials with live audience reactions', '[Base64 JPEG 3]', NULL), -- Image4
+    (3, 'Morning Mix', 'A blend of live chats and pre-recorded segments', 'https://img.freepik.com/free-vector/detailed-podcast-logo-template_23-2148786067.jpg', 'http://live.example.com/sports'), -- Image1
+    (3, 'Comedy Hour', 'Stand-up specials with live audience reactions', 'https://img.freepik.com/free-vector/detailed-podcast-logo-template_23-2148786067.jpg', 'http://live.example.com/sports'), -- Image4
     -- Limited Series (category_id: 4)
-    (4, 'History Unraveled', 'A 5-part series on historical events', '[Base64 JPEG 2]', NULL), -- Image3
-    (4, 'Sci-Fi Tales', 'A 6-episode journey through science fiction stories', '[Base64 JPEG 4]', NULL); -- Image5
+    (4, 'History Unraveled', 'A 5-part series on historical events', 'https://img.freepik.com/free-vector/detailed-podcast-logo-template_23-2148786067.jpg', 'http://live.example.com/sports'), -- Image3
+    (4, 'Sci-Fi Tales', 'A 6-episode journey through science fiction stories', 'https://img.freepik.com/free-vector/detailed-podcast-logo-template_23-2148786067.jpg', 'http://live.example.com/sports'); -- Image5
 
 INSERT INTO listen_audio_streams (stream_id, audio_url, title, duration) VALUES
     -- Live News Update (stream_id: 1) - 4 audios

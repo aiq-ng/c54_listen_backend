@@ -69,8 +69,8 @@ def get_shows_video():
     return Response.success(status.HTTP_200_OK, tv_shows)
 
 
-@live.post('/streams/audio')
-async def upload_audio(
+@live.post('/tv/streams/upload')
+async def upload_videos(
                     stream_id: int = Form(...),
                     title: str = Form(...),
                     duration: int = Form(...),
