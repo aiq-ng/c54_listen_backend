@@ -14,7 +14,7 @@ services:
 
   database:
     image: postgres:latest
-    container_name: c54-db
+    container_name: c54-listen-db
     restart: always
     ports:
       - "5431:5432"
